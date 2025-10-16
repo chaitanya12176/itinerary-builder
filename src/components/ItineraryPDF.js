@@ -262,7 +262,14 @@ const Footer = () => (
       </Text>
     </View>
     <View style={styles.footerLogoBox}>
-      <Image src="/figmaAssets/frame-206-1.png" style={styles.footerLogo} />
+       <Image
+                src="/figmaAssets/frame-206-1.png" // Ensure local assets
+                
+              />
+
+i
+
+
     </View>
   </View>
 );
@@ -291,16 +298,13 @@ const ItineraryPDF = ({ itinerary = {} }) => {
           <Image src={ASSETS.headerBg} style={styles.headerBg} />
           <View style={styles.headerBox}>
             <Image src={ASSETS.logo} style={styles.logo} />
-            <Text style={styles.headerTitle}>Hi, Rahul!</Text>
-            <Text style={styles.headerDestination}>Singapore Itinerary</Text>
-            <Text style={styles.headerDuration}>4 Days 3 Nights</Text>
+            <Text style={styles.headerTitle}>Hi, {tourOverview.clientName || 'Traveler'}!</Text>
+            <Text style={styles.headerDestination}>{tourOverview.destination || 'Your Destination'} Itinerary</Text>
+            <Text style={styles.headerDuration}>{tourOverview.duration || 'Duration: 5 Days'} | {tourOverview.departFrom || 'Departure City'}</Text>
+
             {/* Corrected PLAN PACK GO with airplane icon */}
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 5 }}>
-              <Text style={{ fontSize: 10, color: '#fff', opacity: 0.9 }}>PLAN PACK GO</Text>
-              <Image
-                src="/figmaAssets/airplane-take-off.png" // Ensure this file exists locally
-                style={{ width: 12, height: 12, marginLeft: 4 }}
-              />
+              
             </View>
             {/* Icons at the bottom */}
             <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10 }}>
