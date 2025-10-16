@@ -267,7 +267,7 @@ const Footer = () => (
                 
               />
 
-i
+
 
 
     </View>
@@ -531,7 +531,7 @@ const ItineraryPDF = ({ itinerary = {} }) => {
         <View style={styles.hr} />
         <Text style={styles.sectionTitle}>Terms & Conditions</Text>
         <Text style={styles.linkText}>View all terms and conditions</Text>
-        <Text style={{ fontSize: 10, marginTop: 6 }}>{termsAndConditions || 'Not Specified'}</Text>
+        <Text style={{ fontSize: 10, marginTop: 6 }}>{termsAndConditions || ''}</Text>
         {inclusions && (
           <>
             <Text style={styles.sectionTitle}>Inclusions</Text>
